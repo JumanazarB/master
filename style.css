@@ -1,0 +1,154 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+.nature{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(77, 131, 233);
+}
+.sun{
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    top: 50vh;
+    left: -10wv;
+    border-radius: 50%;
+    background-color: rgb(226, 239, 160);
+    box-shadow: 0 0 15px 5px yellow;
+    animation-name: sun-running;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+@keyframes sun-running{
+    0%{
+        top: 50vh;
+        left: 0;
+    }
+    50%{
+        top: 0;
+        left:50%;
+    }
+    100%{
+        top: 50vh;
+        left: 100%;
+    }
+}
+.ground{
+    position: relative;
+    top: 70vh;
+    width: 100%;
+    height: 30vh;
+    background-color: green;
+}
+.ground__tree{
+    
+    position: relative;
+    top: -40vh;
+    left: 40%;
+    background-image: url(./img/Tree-Elevation-PNG-Architecture-Plan_04-580x761.png);
+    background-size: 100% 100%;
+    width: 200px;
+    height: 300px;
+}
+.ground__tree-apple{
+   position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: green;
+    border-radius: 50%;
+    animation-name: fruit;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    a
+}
+@keyframes fruit{
+    0%{
+        background-color: green;
+    }
+    50%{
+        background-color: rgb(237, 162, 49);
+    }
+    100%{
+        background-color: red;
+    }
+}
+.ground__tree-apple:hover{
+    transform: scale(1.2);
+    transition: transform 2s;
+}
+
+#one{
+    top: 190px;
+    left: 150px;
+}
+
+#one:active{
+    transform: translateY(80px);
+    transition: transform 1s;
+}
+#two{
+    top: 150px;
+    left: 120px;
+}
+#two:active{
+    transform: translateY(120px);
+    transition: transform 1s;
+}
+#three{
+    top: 80px;
+    left: 150px;
+}
+#three:active{
+    transform: translateY(190px);
+    transition: transform 1s;
+}
+#four{
+    top: 150px;
+    left: 50px;
+}
+#four:active{
+    transform: translateY(110px);
+    transition: transform 1s;
+}
+.ground__btn{
+    font-size: 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: aliceblue;
+    position: absolute;
+    left: 100px;
+    top: -10px;
+    text-decoration: none;
+    padding: 20px 40px;
+    background-color: darkgray;
+    border-radius: 10px;
+    animation-name: btn;
+    animation-duration: 5s;
+    
+    animation-iteration-count: infinite;
+}
+.ground__btn:hover{
+    animation-play-state: paused;
+    
+}
+@keyframes btn{
+    0%{
+        background-color: blue;
+        box-shadow: 0 0 10px 5px red;
+
+    }
+    33%{
+        background-color: rgb(255, 0, 208);
+        box-shadow: 0 0 10px 5px yellow;
+    }
+    68%{
+        background-color: yellow;
+        box-shadow: 0 0 10px 5px rgb(0, 26, 255);
+    }
+    100%{
+        background-color: blue;
+        box-shadow: 0 0 10px 5px red;
+
+    }
+}
